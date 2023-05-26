@@ -21,24 +21,6 @@
 #define QWERTY 7
 #define SQWERTY 8
 
-// tap: num-word | double-tap: sticky num-layer | hold: num-layer
-#define SMART_NUM &smart_num NUM 0
-ZMK_BEHAVIOR(smart_num, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&num_dance>;
-)
-ZMK_BEHAVIOR(num_dance, tap_dance,
-    tapping-term-ms = <200>;
-    bindings = <&num_word>, <&sl NUM>;  // reverse this for sticky-num on single tap
-)
-&num_word {  // num-word, requires PR #1441
-    layers = <NUM>;
-    continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
-};
-
-#include "combos.dtsi"  // requires layer aliases and smart number
 #include "mouse.dtsi"
 #include "extra_keys.h"
 
@@ -111,6 +93,22 @@ ZMK_BEHAVIOR(smart_shft, mod_morph,
     /delete-property/ ignore-modifiers;
 };
 
+// tap: num-word | double-tap: sticky num-layer | hold: num-layer
+#define SMART_NUM &smart_num NUM 0
+ZMK_BEHAVIOR(smart_num, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&num_dance>;
+)
+ZMK_BEHAVIOR(num_dance, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&num_word>, <&sl NUM>;  // reverse this for sticky-num on single tap
+)
+&num_word {  // num-word, requires PR #1441
+    layers = <NUM>;
+    continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+};
 
 // smart-mouse, requires PR #1366
 ZMK_BEHAVIOR(smart_mouse, tri_state,
@@ -177,6 +175,7 @@ ZMK_BEHAVIOR(dot_spc, macro,
     bindings = <&kp DOT &kp SPACE &sk LSHFT>;
 )
 
+#include "combos.dtsi"  // requires layer aliases and stuff
 
 /* Keymap */
 
