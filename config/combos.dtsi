@@ -38,3 +38,9 @@ ZMK_COMBO(rbrc,      &kp RBRC,   LT3 RT3,  DEF        , COMBO_TERM_SLOW)
 // <>
 ZMK_COMBO(lt  ,      &kp LT  ,   LM4 RM4,  DEF        , COMBO_TERM_FAST)
 ZMK_COMBO(gt  ,      &kp GT  ,   LT4 RT4,  DEF        , COMBO_TERM_SLOW)
+
+/* layers */
+ZMK_COMBO(lbq,  &to QWERTY,  LT4 RT4 LB4 RB4, DEF     , COMBO_TERM_SLOW)
+ZMK_COMBO(lbsq, &to SQWERTY, LM4 RM4 LB4 RB4, DEF     , COMBO_TERM_SLOW)
+ZMK_COMBO(lqb,  &to DEF,     LT4 RT4 LM4 RM4, QWERTY  , COMBO_TERM_SLOW)
+ZMK_COMBO(lsqb, &to DEF,     LT4 RT4 LM4 RM4, SQWERTY , COMBO_TERM_SLOW)
