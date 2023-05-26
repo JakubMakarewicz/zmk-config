@@ -3,7 +3,7 @@
 
 /* map Zen's extra keys */
 #define X_LH  &lt MEDIA ESC  // thumb row, left
-#define X_RH  &lt FUN DEL       // thumb row, right
+#define X_RH  &lt FN DEL       // thumb row, right
 
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1

@@ -37,4 +37,4 @@ ZMK_COMBO(lbrc,      &kp LBRC,   LM3 RM3,  DEF        , COMBO_TERM_FAST)
 ZMK_COMBO(rbrc,      &kp RBRC,   LT3 RT3,  DEF        , COMBO_TERM_SLOW)
 // <>
 ZMK_COMBO(lt  ,      &kp LT  ,   LM4 RM4,  DEF        , COMBO_TERM_FAST)
-ZMK_COMBO(rt  ,      &kp RT  ,   LT4 RT4,  DEF        , COMBO_TERM_SLOW)
+ZMK_COMBO(gt  ,      &kp GT  ,   LT4 RT4,  DEF        , COMBO_TERM_SLOW)
