@@ -158,6 +158,19 @@ ZMK_BEHAVIOR(dot_spc, macro,
     tap-ms = <5>;
     bindings = <&kp DOT &kp SPACE &sk LSHFT>;
 )
+// double tap guards
+ZMK_BEHAVIOR(u_btclr, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&none>, <&bt BT_CLR>; 
+)
+ZMK_BEHAVIOR(u_boot, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&none>, <&bootloader>; 
+)
+ZMK_BEHAVIOR(u_reset, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&none>, <&sys_reset>; 
+)
 
 #include "combos.dtsi"  // requires layer aliases and stuff
 
@@ -203,11 +216,11 @@ ZMK_LAYER(mouse,
 
 ZMK_LAYER(media,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    XXX      XXX           XXX           &bt BT_CLR    XXX           &bootloader     X_MT     &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    XXX 
+    XXX      XXX           XXX           &u_btclr      XXX           &u_boot         X_MT     &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    XXX 
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     XXX      &sk LGUI      &sk LALT      &sk LCTRL     &sk LSHFT     XXX             X_MM     &out OUT_USB  &kp C_PREV    &kp C_RW      &kp C_FF      &kp C_NEXT      XXX 
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    XXX      XXX           XXX           XXX           XXX           &sys_reset      X_MB   &ext_power EP_TOG &kp C_VOL_DN &kp C_VOL_UP &kp C_BRI_DN  &kp C_BRI_UP    XXX 
+    XXX      XXX           XXX           XXX           XXX           &u_reset      X_MB   &ext_power EP_TOG &kp C_VOL_DN &kp C_VOL_UP &kp C_BRI_DN  &kp C_BRI_UP    XXX 
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     ___                                                ___           ___             X_MH   &lt SYM C_STOP  &lt NUM C_PP                                           &lt FN C_MUTE
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
@@ -270,7 +283,7 @@ ZMK_LAYER(sqwerty,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     XXX      &kp LCTRL     &kp Z         &kp X         &kp C         &kp V           X_MB     &kp B         &kp N         &kp M         &kp P         XXX             XXX
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-  &kp LALT                                             &kp SPACE     &lt NUM TAB     X_MH      &kp RET      &kp BSPC                                                &kp RALT
+  &kp LALT                                             &kp SPACE     &lt NUM ESC     X_MH      &kp RET      &kp BSPC                                                &kp RALT
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
