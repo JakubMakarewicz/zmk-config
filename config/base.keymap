@@ -141,7 +141,7 @@ ZMK_BEHAVIOR(ats_has, mod_morph,
 
 ZMK_BEHAVIOR(fsl_bsl, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
-    bindings = <&kp SLASH>, <&kp NUBS>;
+    bindings = <&kp NUBS>, <&kp SLASH>;
 )
 // /mod_morphs
 
@@ -253,11 +253,11 @@ ZMK_LAYER(num,
 
 ZMK_LAYER(sym,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    XXX      &kp GRAVE     &und_car      &fsl_bsl      &plu_min      &kp DLLR        X_MT     XXX           XXX           XXX           XXX           XXX             XXX 
+    XXX      &kp GRAVE     &und_car      &fsl_bsl      &ats_has      XXX             X_MT     XXX           XXX           XXX           XXX           XXX             XXX 
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    XXX      &exc_que      &and_or       &kp EQUAL     &dap_sap      &ats_has        X_MM     XXX           &sk LSHFT     &sk LCTRL     &sk LALT      &sk LGUI         XXX 
+    XXX      &exc_que      &and_or       &kp EQUAL     &dap_sap      XXX             X_MM     XXX           &sk LSHFT     &sk LCTRL     &sk LALT      &sk LGUI         XXX 
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    XXX      XXX           XXX           &tim_per      XXX           XXX             X_MB     XXX           XXX           XXX           XXX           XXX             XXX  
+    XXX      XXX           XXX           &tim_per      &kp DLLR      XXX             X_MB     XXX           XXX           XXX           XXX           XXX             XXX  
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     ___                                                ___           ___             X_MH     ___           ___                                                       ___ 
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯

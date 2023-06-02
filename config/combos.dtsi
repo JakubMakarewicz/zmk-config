@@ -12,7 +12,8 @@
 #define COMBO_HOOK require-prior-idle-ms = <150>;
 
 #define COMBO_TERM_FAST 35 
-#define COMBO_TERM_SLOW 45 
+#define COMBO_TERM_SLOW 45
+#define COMBO_TERM_SLOWER 55  
 #define COMBO_TERM_SLOWEST 300
 
 // make homerow combos tap-only (so HRMs can be chorded instantaneously)
@@ -32,14 +33,14 @@ ZMK_COMBO(smrt_num,  SMART_NUM,  LM1 LM2,  DEF        , COMBO_TERM_FAST)
 ZMK_COMBO(lpar,      &kp LPAR,   LM1 RM1,  DEF        , COMBO_TERM_FAST)
 ZMK_COMBO(rpar,      &kp RPAR,   LT1 RT1,  DEF        , COMBO_TERM_SLOW)
 // []
-ZMK_COMBO(lbkt,      &kp LBKT,   LM2 RM2,  DEF        , COMBO_TERM_FAST)
-ZMK_COMBO(rbkt,      &kp RBKT,   LT2 RT2,  DEF        , COMBO_TERM_SLOW)
+ZMK_COMBO(lbkt,      &kp LBKT,   LM2 RM2,  DEF        , COMBO_TERM_SLOW)
+ZMK_COMBO(rbkt,      &kp RBKT,   LT2 RT2,  DEF        , COMBO_TERM_SLOWER)
 // {}
 ZMK_COMBO(lbrc,      &kp LBRC,   LM3 RM3,  DEF        , COMBO_TERM_SLOW)
-ZMK_COMBO(rbrc,      &kp RBRC,   LT3 RT3,  DEF        , COMBO_TERM_SLOW)
+ZMK_COMBO(rbrc,      &kp RBRC,   LT3 RT3,  DEF        , COMBO_TERM_SLOWER)
 // <>
 ZMK_COMBO(lt  ,      &kp LT  ,   LM4 RM4,  DEF        , COMBO_TERM_SLOW)
-ZMK_COMBO(gt  ,      &kp GT  ,   LT4 RT4,  DEF        , COMBO_TERM_SLOW)
+ZMK_COMBO(gt  ,      &kp GT  ,   LT4 RT4,  DEF        , COMBO_TERM_SLOWER)
 
 /* layers */
 ZMK_COMBO(lbq,  &to QWERTY,  LT4 RT4 LB4 RB4, DEF     , COMBO_TERM_SLOWEST)
