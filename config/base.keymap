@@ -139,11 +139,6 @@ ZMK_BEHAVIOR(ats_has, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
     bindings = <&kp AT>, <&kp HASH>;
 )
-
-ZMK_BEHAVIOR(fsl_bsl, mod_morph,
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-    bindings = <&kp FSLH>, <&kp SLASH>;
-)
 // /mod_morphs
 
 // tap: space | shift + tap: dot -> space -> sticky shift | hold: activate layer
@@ -297,7 +292,7 @@ ZMK_LAYER(gnum,
 
 ZMK_LAYER(sym,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    XXX      &kp GRAVE     &und_car      &fsl_bsl      &ats_has      XXX             X_MT     XXX           XXX           XXX           XXX           XXX             XXX 
+    XXX      &kp GRAVE     &und_car      &kp BSLH      &ats_has      XXX             X_MT     XXX           XXX           XXX           XXX           XXX             XXX 
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     XXX      &exc_que      &and_or       &kp SQT       &kp DQT       XXX             X_MM     XXX           &sk LSHFT     &sk LCTRL     &sk LALT      &sk LGUI         XXX 
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
