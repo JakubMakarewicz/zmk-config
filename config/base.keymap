@@ -142,7 +142,7 @@ ZMK_BEHAVIOR(ats_has, mod_morph,
 
 ZMK_BEHAVIOR(fsl_bsl, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
-    bindings = <&kp NUBS>, <&kp SLASH>;
+    bindings = <&kp FSLH>, <&kp SLASH>;
 )
 // /mod_morphs
 
