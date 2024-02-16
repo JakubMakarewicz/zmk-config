@@ -24,10 +24,10 @@
 //#define HRC_RPAR   &hmr_rpar_gt LA(LCTRL) 0
 
 /* modifiers */
-ZMK_COMBO(key_rep,   &key_repeat,RM2 RM3,  DEF        , COMBO_TERM_FASTER)
-ZMK_COMBO(esc,       &kp ESC,    LM2 LM3,  DEF        , COMBO_TERM_FASTER)
-ZMK_COMBO(caps_word, &caps_word, RM1 RM2,  DEF        , COMBO_TERM_FASTER)
-ZMK_COMBO(smrt_num,  SMART_NUM,  LM1 LM2,  DEF        , COMBO_TERM_FASTER)
+ZMK_COMBO(key_rep,   &key_repeat,RB2 RB3,  DEF        , COMBO_TERM_FASTER)
+ZMK_COMBO(esc,       &kp ESC,    LB2 LB3,  DEF        , COMBO_TERM_FASTER)
+ZMK_COMBO(caps_word, &caps_word, RB1 RB2,  DEF        , COMBO_TERM_FASTER)
+ZMK_COMBO(smrt_num,  SMART_NUM,  LB1 LB2,  DEF        , COMBO_TERM_FASTER)
 
 /* symbols */
 // ()
