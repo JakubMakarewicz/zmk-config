@@ -21,8 +21,9 @@
 #define MEDIA 5
 #define FN 6
 #define NUM 7
-#define SYM 8
-#define LOCK 9
+#define GNUM 8
+#define SYM 9
+#define LOCK 10
 
 #include "mouse.dtsi"
 #include "extra_keys.h"
